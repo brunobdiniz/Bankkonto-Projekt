@@ -99,7 +99,7 @@ class SparKonto(Konto):
         return self.betrag
 
 
-class GeschäftsKonto(Konto):
+class GeschaftsKonto(Konto):
     def __init__(self, kunde_id, einzahlungs_betrag):
         Konto.__init__(self, kunde_id)
         self.betrag = einzahlungs_betrag
@@ -149,13 +149,13 @@ if __name__ == '__main__':
     isCustomer = False
 
     def initialise_objects():
-        global manuel_giro, jana_geschäft, jana_spar, zusammen_liste
+        global manuel_giro, jana_geschaft, jana_spar, zusammen_liste
 
         manuel_giro = Girokonto(1, 2567.50)
-        jana_geschäft = GeschäftsKonto(2, 12890.01)
+        jana_geschaft = GeschaftsKonto(2, 12890.01)
         jana_spar = SparKonto(2, 14500.40)
 
-        zusammen_liste = [[manuel_giro, 1, 1], [jana_geschäft, 2, 2], [jana_spar, 2, 3]]
+        zusammen_liste = [[manuel_giro, 1, 1], [jana_geschaft, 2, 2], [jana_spar, 2, 3]]
 
         return None
 
