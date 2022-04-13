@@ -170,10 +170,10 @@ if __name__ == '__main__':
 
         kunden_kontos = []
         for i in zusammen_liste:
-            if i[1] == kundenID:
+            if i[1]  == int(kundenID):
                 kunden_kontos.append(i[2])
                 isCustomer = True
-
+        
         if isCustomer is True:
             isAccountSelected = False
 
@@ -200,8 +200,9 @@ if __name__ == '__main__':
                         action_value = input("Please enter your choice: ")
 
                         if action_value == 1:
-                            objectName.anzeige_betrag()
                             print("\n")
+                            objectName.anzeige_betrag()
+                        
 
                         if action_value == 2:
                             betrag_zu_abheben = input("Geben Sie den zu abheben Betrag ein: ")
